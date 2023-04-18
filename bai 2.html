@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+  function tryRemoveFromArray(ar) {
+    for (let i = 0; i < ar.length; i++){
+      if (index === i){
+        ar.splice(i,1);
+      }
+    }
+    return ar
+  }
+  let atr1 = [5,7,6,3,2,6,2,4];
+  let index = +prompt('nhập vị trí');
+  let atr2 = tryRemoveFromArray(atr1);
+  document.write(atr2);
+</script>

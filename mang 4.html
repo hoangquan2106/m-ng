@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let a = prompt('nhập');
+    let chuhoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let chuthuong = 'abcdefghijklmnopqrstuvwxyz';
+  const b = [];
+  for ( let i =0; i = a.length; i++){
+      if ( chuhoa.includes(a[i])){
+          document.write(a[i].toLowerCase());
+          break;
+      }
+      else if (chuthuong.includes(a[i])){
+          document.write(a[i].toUpperCase());
+          break;
+      }
+      else {
+          document.write(b.join(""));
+      }
+  }
+
+</script>

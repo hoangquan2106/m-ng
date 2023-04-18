@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+  const num = window.prompt();
+  const trs =num.toString();
+  const eb = [trs[0]];
+  for (let i = 1; i <trs.length; i++) {
+    if ((trs[i-1]%2===0)&&(trs[i]%2===0)){
+        eb.push("-", trs[i]);
+    }
+    else {
+        eb.push(trs[i])
+    }
+  }
+ document.write(
+     eb.join(''));
+</script>
