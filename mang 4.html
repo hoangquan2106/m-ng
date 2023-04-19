@@ -10,21 +10,21 @@
 </body>
 </html>
 <script>
-    let a = prompt('nhập');
-    let chuhoa = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    let chuthuong = 'abcdefghijklmnopqrstuvwxyz';
-  const b = [];
-  for ( let i =0; i = a.length; i++){
-      if ( chuhoa.includes(a[i])){
-          document.write(a[i].toLowerCase());
+    let ay = prompt('nhập');
+    let chuhoa = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
+    let chuthuong = [a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z];
+  const by = [];
+  for ( let i =0; i = ay.length; i++){
+      if (chuhoa[i] === by){
+          document.write(chuthuong[i])
           break;
       }
-      else if (chuthuong.includes(a[i])){
-          document.write(a[i].toUpperCase());
+      else  if (chuthuong[i] === by){
+          document.write(chuhoa[i])
           break;
       }
       else {
-          document.write(b.join(""));
+          document.write(by.join(""));
       }
   }
 

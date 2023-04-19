@@ -5,6 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-
+<input type="text" id="a">
+<button onclick="c()">tìm</button>
+<p id="d"></p>
 </body>
 </html>
+<script>
+    function c() {
+        let arr1 = ["banana","apple","orange"];
+        let arr2 = ["chuối","táo","cam"]
+        let b = document.getElementById("a").value
+        for (let i =0; i<arr1.length; i++){
+            if (arr1[i] === b){
+                document.getElementById("d").innerHTML = arr2[i]
+                break;
+            }
+            else if (arr2[i] === b){
+                document.getElementById("d").innerHTML = arr1[i]
+                break;
+            }
+            else {
+                document.getElementById("d").innerHTML = "không có"
+            }
+        }
+    }
+</script>
