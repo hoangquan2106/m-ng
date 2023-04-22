@@ -2,22 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="hoangquan" content="width=device-width, initial-scale=1.0">
     <title>Tro choi</title>
 </head>
-<body>
-<canvas id = "game snake" width="900" height="500"></canvas>
-<p id = "score">score: 0</p>
+<body onload="startGame()" id="adc">
+<img src="https://nhadepso.com/wp-content/uploads/2023/01/cap-nhat-50-hinh-anh-vu-tru-dep-huyen-ao-lung-linh-lam-hinh-nen_1.jpg" id="imga" hidden>
+<img src="https://o.remove.bg/downloads/1825d845-a017-4bc7-ba92-3abc70d17aae/phi_h%C3%A0nh_gia-removebg-preview.png" id="ios" hidden>
+<img src="https://o.remove.bg/downloads/7d422dd6-9972-4939-b4ef-7fd341d9ab08/abcsad-removebg-preview.png" id="conbo" hidden>
+<canvas id = "gamesnake" width="1350" height="550" style="border: 1px solid black"></canvas>
+<h1 id = "score">score: 0</h1>
+
 </body>
 </html>
 <script>
-        let canvas = document.getElementById('hoangquan');
-        let context = document.getContext('2d');
-        let scoreshow = document.getElementById('score');
-        let birding = new image();
-        let hinhnenchinh = new image();
-        let ongtren = new image();
-        let ongduoi = new image();
+    let snake = document.getElementById("gamesnake");
+    let snake1 =snake.getContext("2d");
+    let image = document.getElementById("imga");
+    snake1.drawImage(image, 0, 0, 1350, 550);
+    let io = document.getElementById("ios");
+    snake1.drawImage(io, 20, 330, 250, 250);
+    let contrung = document.getElementById("conbo");
+    snake1.drawImage(contrung, 320, 1200, 70, 70);
 
-        ongtren.src=""
+    class phihanh {
+        constructor(x, y, ios, image) {
+            this.speed = Math.random() * 3 + 1;
+            this.ios = ios;
+            this.x = x;
+            this.y = y;
+            this.image = image
+            this.conbo = conbo
+    }
+    draw = function () {
+        snake1.drawImage(this.image, 0, 0, 1350, 550);
+        snake1.drawImage(this.ios, this.x, this.y, 250, 250);
+        snake1.drawImage(this.conbo, this.x, this.y, 70, 70);
+    }
+    drop () {
+        this.x += this.speed;
+        }
+    }
+    let star = new phihanh(20, 330, io, image);
+    let arr = [star]
+    function cear() {
+        snake1.clearRect(0, 0, snake.width, snake.height);
+    }
+    setInterval(move , 30);
+    function move() {
+        cear();
+        for (let i = 0; i < arr.length; i++){
+            if (arr[i].y > 400){
+                arr[i].y = 0;
+                arr[i].x = 600;
+            }
+            arr[i].drop();
+            arr[i].draw();
+        }
+    }
+
+
 </script>
